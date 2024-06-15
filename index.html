@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+  <title>SaquibVerse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header
+    class="fixed inset-x-0 top-0 z-30 mx-auto  max-w-screen-xl border border-gray-900  py-1 shadow-lg  backdrop-blur-md md:top-3 rounded-3xl md:w-[90%]">
+    <div class="px-4 ">
+      <div class="flex items-center justify-between">
+        <div class="flex shrink-0 ">
+          <img class='w-[100px] md:hidden' src="/assets/logo2.png" alt="" srcset="" />
+          <img class='w-[90px] hidden md:block' src="/assets/logo1.png" alt="" srcset="" />
+        </div>
+
+
+
+        <div class="hidden md:flex md:items-center md:justify-center md:gap-5">
+
+
+          <a href="#intro"
+            class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full header-button">
+            <span
+              class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+            <span
+              class="relative px-4 py-2 transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                <path fill="white"
+                  d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                <path fill="white"
+                  d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+              </svg>
+              <span class="lg:block hidden relative text-white">Home</span>
+            </span>
+          </a>
+
+          <a href="#about"
+            class=" header-button relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full">
+            <span
+              class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+            <span
+              class="relative px-4 py-2 transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                <path fill="white" fillRule="evenodd"
+                  d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                  clipRule="evenodd" />
+              </svg>
+              <span class="lg:block hidden relative text-white">About</span>
+            </span>
+          </a>
+
+
+          <a href="#education"
+            class=" header-button relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full">
+            <span
+              class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+            <span
+              class="relative px-4 py-2 transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                <path
+                  d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                <path
+                  d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                <path
+                  d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+              </svg>
+              <span class="lg:block hidden relative text-white">Education</span>
+            </span>
+          </a>
+
+          <a href="#tools"
+            class=" header-button relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full">
+            <span
+              class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+            <span
+              class="relative px-4 py-2 transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill="white" fillRule="evenodd"
+                  d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z"
+                  clipRule="evenodd" />
+                <path fill="white"
+                  d="m10.076 8.64-2.201-2.2V4.874a.75.75 0 0 0-.364-.643l-3.75-2.25a.75.75 0 0 0-.916.113l-.75.75a.75.75 0 0 0-.113.916l2.25 3.75a.75.75 0 0 0 .643.364h1.564l2.062 2.062 1.575-1.297Z" />
+                <path fill="white" fillRule="evenodd"
+                  d="m12.556 17.329 4.183 4.182a3.375 3.375 0 0 0 4.773-4.773l-3.306-3.305a6.803 6.803 0 0 1-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 0 0-.167.063l-3.086 3.748Zm3.414-1.36a.75.75 0 0 1 1.06 0l1.875 1.876a.75.75 0 1 1-1.06 1.06L15.97 17.03a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd" />
+              </svg>
+              <span class="lg:block hidden relative text-white">Skills</span>
+            </span>
+          </a>
+
+
+          <a href="#projects"
+            class=" header-button relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full">
+            <span
+              class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+            <span
+              class="relative px-4 py-2 transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill="white" fillRule="evenodd"
+                  d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"
+                  clipRule="evenodd" />
+                <path fill="white"
+                  d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z" />
+              </svg>
+              <span class="lg:block hidden relative text-white">Projects</span>
+            </span>
+          </a>
+        </div>
+
+
+        <div class="flex items-center justify-end gap-3">
+          <a href="#contact"
+            class="relative inline-flex items-center justify-center p-2 px-4 py-2 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-cyan-500 rounded-full shadow-md group">
+            <span
+              class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-cyan-400 group-hover:translate-x-0 ease">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+                <path fillRule="evenodd"
+                  d="M6.912 3a3 3 0 0 0-2.868 2.118l-2.411 7.838a3 3 0 0 0-.133.882V18a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0 0 17.088 3H6.912Zm13.823 9.75-2.213-7.191A1.5 1.5 0 0 0 17.088 4.5H6.912a1.5 1.5 0 0 0-1.434 1.059L3.265 12.75H6.11a3 3 0 0 1 2.684 1.658l.256.513a1.5 1.5 0 0 0 1.342.829h3.218a1.5 1.5 0 0 0 1.342-.83l.256-.512a3 3 0 0 1 2.684-1.658h2.844Z"
+                  clipRule="evenodd" />
+              </svg>
+            </span>
+            <span
+              class="absolute flex items-center justify-center w-full h-full text-grey-100 transition-all duration-300 transform group-hover:translate-x-full ease">Contact
+              Me</span>
+            <span class="relative invisible">Contact Me</span>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Downbar -->
+  <header
+    class="fixed mb-6  inset-x-0 rounded-3xl bottom-0 z-30 mx-auto w-9/12 border backdrop-blur-sm  py-2 shadow  md:hidden sm:block">
+
+    <div class="flex items-center justify-between mx-4">
+
+      <a href="#intro"
+        class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full header-button"
+        data-target="#intro">
+        <span
+          class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+        <span
+          class="relative px-[10px] py-[5px] transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-1.6">
+          <!-- Replaced SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-cyan-500">
+            <path
+              d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z">
+            </path>
+          </svg>
+        </span>
+      </a>
+
+      <a href="#about"
+        class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full header-button"
+        data-target="#about">
+        <span
+          class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+        <span
+          class="relative px-[10px] py-[5px] transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-1.6">
+          <!-- Updated SVG with cyan fill color -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-cyan-500">
+            <path fill-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-5.5-2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 12a5.99 5.99 0 0 0-4.793 2.39A6.483 6.483 0 0 0 10 16.5a6.483 6.483 0 0 0 4.793-2.11A5.99 5.99 0 0 0 10 12Z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+      </a>
+
+      <a href="#education"
+        class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full header-button"
+        data-target="#education">
+        <span
+          class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+        <span
+          class="relative px-[10px] py-[5px] transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-1.6">
+          <!-- Updated SVG with cyan fill color -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-cyan-500">
+            <path fill-rule="evenodd"
+              d="M9.664 1.319a.75.75 0 0 1 .672 0 41.059 41.059 0 0 1 8.198 5.424.75.75 0 0 1-.254 1.285 31.372 31.372 0 0 0-7.86 3.83.75.75 0 0 1-.84 0 31.508 31.508 0 0 0-2.08-1.287V9.394c0-.244.116-.463.302-.592a35.504 35.504 0 0 1 3.305-2.033.75.75 0 0 0-.714-1.319 37 37 0 0 0-3.446 2.12A2.216 2.216 0 0 0 6 9.393v.38a31.293 31.293 0 0 0-4.28-1.746.75.75 0 0 1-.254-1.285 41.059 41.059 0 0 1 8.198-5.424ZM6 11.459a29.848 29.848 0 0 0-2.455-1.158 41.029 41.029 0 0 0-.39 3.114.75.75 0 0 0 .419.74c.528.256 1.046.53 1.554.82-.21.324-.455.63-.739.914a.75.75 0 1 0 1.06 1.06c.37-.369.69-.77.96-1.193a26.61 26.61 0 0 1 3.095 2.348.75.75 0 0 0 .992 0 26.547 26.547 0 0 1 5.93-3.95.75.75 0 0 0 .42-.739 41.053 41.053 0 0 0-.39-3.114 29.925 29.925 0 0 0-5.199 2.801 2.25 2.25 0 0 1-2.514 0c-.41-.275-.826-.541-1.25-.797a6.985 6.985 0 0 1-1.084 3.45 26.503 26.503 0 0 0-1.281-.78A5.487 5.487 0 0 0 6 12v-.54Z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+      </a>
+
+      <a href="#tools"
+        class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full header-button"
+        data-target="#tools">
+        <span
+          class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+        <span
+          class="relative px-[10px] py-[5px] transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-1.6">
+          <!-- Updated SVG with cyan fill color -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-cyan-500">
+            <path fill-rule="evenodd"
+              d="M19 5.5a4.5 4.5 0 0 1-4.791 4.49c-.873-.055-1.808.128-2.368.8l-6.024 7.23a2.724 2.724 0 1 1-3.837-3.837L9.21 8.16c.672-.56.855-1.495.8-2.368a4.5 4.5 0 0 1 5.873-4.575c.324.105.39.51.15.752L13.34 4.66a.455.455 0 0 0-.11.494 3.01 3.01 0 0 0 1.617 1.617c.17.07.363.02.493-.111l2.692-2.692c.241-.241.647-.174.752.15.14.435.216.9.216 1.382ZM4 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+      </a>
+
+      <a href="#projects"
+        class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-full header-button"
+        data-target="#projects">
+        <span
+          class="w-full h-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 group-hover:from-cyan-500 group-hover:to-fuchsia-500 absolute"></span>
+        <span
+          class="relative px-[10px] py-[5px] transition-all ease-out bg-gray-900 rounded-full group-hover:bg-opacity-0 duration-400 inline-flex items-center gap-1.6">
+          <!-- Updated SVG with cyan fill color -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-cyan-500">
+            <path fill-rule="evenodd"
+              d="M4.606 12.97a.75.75 0 0 1-.134 1.051 2.494 2.494 0 0 0-.93 2.437 2.494 2.494 0 0 0 2.437-.93.75.75 0 1 1 1.186.918 3.995 3.995 0 0 1-4.482 1.332.75.75 0 0 1-.461-.461 3.994 3.994 0 0 1 1.332-4.482.75.75 0 0 1 1.052.134ZM5.752 12A13.07 13.07 0 0 0 8 14.248v4.002c0 .414.336.75.75.75a5 5 0 0 0 4.797-6.414 12.984 12.984 0 0 0 5.45-10.848.75.75 0 0 0-.735-.735 12.984 12.984 0 0 0-10.849 5.45A5 5 0 0 0 1 11.25c.001.414.337.75.751.75h4.002ZM13 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+              clip-rule="evenodd" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Intro Home -->
+  <section id="intro"
+    class="min-h-screen container grid place-items-center relative overflow-hidden before:absolute before:top-0 before:start-1/2  before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-heroDark">
+    <div class="w-full pt-20 grid md:grid-cols-6 h-full items-center max-w-6xl justify-around">
+      <!-- First section -->
+      <div class="lg:col-span-2 sm:pl-2 md:col-span-3 md:text-left text-center">
+        <div>
+          <h5 class="font-medium text-gray-600 dark:text-gray-200">
+            Hello Welcome,
+          </h5>
+          <h1 class="sm:text-5xl text-4xl dark:text-white !leading-normal relative font-medium">
+            I'm <span class="text-primary">Saquib</span> <br />
+            <span id="domain" class="typing"></span>
+          </h1>
+
+          <a href="https://www.linkedin.com/in/md-saquib-hussain/"
+            class="animate-bounce relative inline-block px-3 py-1 font-medium text-sm group">
+            <span
+              class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+            <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+            <span class="relative text-black group-hover:text-white">Let's Connect</span>
+          </a>
+          <a href="https://github.com/md-hussain28"
+            class="animate-bounce relative inline-block px-3 py-1 font-medium text-sm group">
+            <span
+              class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+            <span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+            <span class="relative text-black group-hover:text-white">GitHub</span>
+          </a>
+
+
+        </div>
+
+        <div class="md:w-96 md:ml-auto flex mt-9 gap-2 dark:text-gray-300">
+          <i class="fa-solid fa-border-all mt-0.5 md:inline-block hidden"></i>
+          <p class="text-clip text-balance leading-5 max-w-md px-2 mx-auto">
+            "Transforming Ideas into Reality through Code and Creativity" 
+          </p>
+        </div>
+
+        <div class="flex items-center md:justify-end justify-center dark:text-gray-200 text-gray-600 gap-6 mt-9">
+          <p class="text-xs">Follow Me </p>
+          <div class="flex justify-end gap-3">
+            <a href="https://github.com/md-hussain28" class=" animate-spin-slow social-icon">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/md-saquib-hussain/" class="animate-spin-slow social-icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/_md_hussain_28_/" class="animate-spin-slow social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Second section -->
+      <div class="lg:col-span-2 md:col-span-3">
+        <img src="assets/photo1.png" class="w-2/3 mx-auto md:w-full max-w-96 md:mt-0 mt-5" alt="" />
+      </div>
+
+      <!-- Third section -->
+      <div
+        class="lg:col-span-2 md:col-span-6 lg:bg-gradient-to-l md:bg-none mt-2 bg-gradient-to-l dark:from-slate-800 from-gray-100 lg:h-96 md:h-auto h-96 w-full">
+        <ul class="text-3xl  text-center pt-5 lg:block md:flex items-center justify-around">
+
+          <br />
+          <li><span class="font-Oswald text-cyan-400">CodeForces</span> <span class="text-primary">Specilaist</span>
+          </li>
+          <br />
+          <br>
+          <li><span class="font-Oswald text-cyan-400">CodeChef </span><span class="text-primary">4 star</span></li>
+          <br />
+          <li>
+            <a href="https://mdsaquibhussaincv.tiiny.site" target="_blank" rel="noopener noreferrer" download
+              class="btn animate-pulse btn-outline lg:mt-5 md:mt-0 mt-5 px-4 py-2 text-sm">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Section About -->
+  <section id="about"
+    class="relative  container mx-auto flex flex-col items-center justify-center pb-10 px-6 pt-12 lg:pt-0 lg:pb-10">
+
+
+    <!-- Text Section -->
+    <div class="space-y-3 text-center mb-10">
+      <p class="text-gray-700">Get To Know More</p>
+      <p class="text-4xl font-semibold dark:text-white">About Me</p>
+    </div>
+
+    <!-- Info Container -->
+    <div
+      class="w-full flex flex-col items-center justify-center space-y-8 mt-4 lg:mt-16 lg:flex-row lg:space-y-0 lg:space-x-12">
+      <!-- Image Section -->
+      <div class="flex w-72 h-72 lg:w-96 lg:h-96">
+        <img src="assets/photo2.jpg" alt="Profile Picture" class=" rounded-3xl shadow-white shadow-lg">
+      </div>
+
+      <!-- Experience and Education Container -->
+      <div class="w-full flex flex-col items-center lg:w-1/2 space-y-7 text-center lg:text-left">
+        <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
+          <!-- Experience Card -->
+          <div
+            class=" shadow-cyan-500 flex flex-col items-center justify-center space-y-1 py-5 px-4 border border-gray-300 rounded-3xl shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
+            <img src="assets/experience.png" alt="Experience" class="w-9 h-9">
+            <p class="font-bold text-xl dark:text-white">Experience</p>
+            <p class="text-gray-700 dark:text-gray-300">Intern at</p>
+            <p class="text-gray-700 dark:text-gray-300">EzyGen Technologies</p>
+          </div>
+
+          <!-- Education Card -->
+          <div
+            class=" shadow-fuchsia-500 flex flex-col items-center justify-center space-y-1 py-5 px-4 border border-gray-300 rounded-3xl shadow-md bg-white dark:bg-gray-800 dark:border-gray-700">
+            <img src="assets/iitdhn.png" alt="Education" class="w-9 h-9">
+            <p class="font-bold text-xl dark:text-white">Education</p>
+            <p class="text-gray-700 dark:text-gray-300">B.Tech in Computer Science</p>
+            <p class="text-gray-700 dark:text-gray-300">IIT Dhanbad</p>
+          </div>
+        </div>
+
+        <p class=" dark:text-gray-300 text-left px-6 lg:px-0">
+          I am Md Saquib Hussain, pursuing a B.Tech in Computer Science and Engineering at 
+          IIT Dhanbad, with a deep passion for Web Development and Machine Learning.
+          I interned at Ezygen Techno, where I gained valuable hands-on experience and refined my 
+          technical skills. I am eager to leverage my knowledge and enthusiasm to contribute 
+          to innovative projects and drive technological advancements. Let's connect to explore 
+          how I can add value to your organization.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+   
+
+  <!-- Tools -->
+  <section id="tools" class="bg-gray-900 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-white">Tools & Languages</h2>
+
+      <!-- Infinite Carousel Container -->
+      <div class="relative overflow-hidden">
+        <div class="flex space-x-4 animate-scroll">
+          <!-- Single Tool Card -->
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+
+          <div
+          class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+          <img src="react-logo.png" alt="React Logo" class="h-16">
+        </div>
+        <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+          <div
+            class="w-32 h-32 flex-shrink-0 bg-white rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+            <img src="react-logo.png" alt="React Logo" class="h-16">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container min-h-screen flex-center">
+    <div class="text-center text-balance">
+      <h3>My Projects</h3>
+      <p class="px-2 mt-3 text-gray-500">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime itaque
+        totam, ut asperiores placeat saepe earum molestias deleniti,
+        repudiandae animi sit laudantium aliquam delectus assumenda numquam
+        ab. Dolorum, illo laborum!
+      </p>
+
+      <br />
+      <div class="flex-center gap-4">
+        <button class="btn btn-filled">Website</button>
+        <button class="btn btn-outline">Mobile App</button>
+        <button class="btn btn-outline">Figma</button>
+      </div>
+      <br />
+      <div
+        class="*:w-full grid mx-auto md:grid-rows-2 md:grid-cols-2 max-w-4xl md:px-0 px-10 *:h-full *:object-cover *:border-4 *:dark:border-white *:rounded-md gap-4 *:cursor-pointer group hover:*:!grayscale-0 *:hover:grayscale *:duration-1000">
+        <img class="" src="" alt="" />
+        <img src="" class="row-span-2" alt="" />
+        <img src="" class="" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container relative max-w-4xl mx-auto min-h-screen flex-center px-5">
+    <div class="pb-10">
+      <div class="text-center">
+        <h3>Contact Me</h3>
+        <p class="px-2 mt-3 text-gray-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          itaque totam, ut asperiores placeat saepe earum molestias deleniti,
+          repudiandae animi sit laudantium aliquam delectus assumenda numquam
+          ab. Dolorum, illo laborum!
+        </p>
+      </div>
+      <div class="mt-12 md:relative flex flex-col gap-5 sm:max-w-full mx-auto max-w-xs">
+        <div
+          class="dark:bg-slate-800 bg-slate-50 dark:text-gray-100 text-gray-800 rounded-lg shadow-xl mx-auto md:w-2/3 py-14 px-7 w-full">
+          <h3 class="font-semibold text-3xl">
+            Send Us A <br /><span class="text-primary">Message</span>
+          </h3>
+          <form class="*:flex *:flex-col *:gap-1 mt-5 md:w-2/3 w-full">
+            <div class="">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter your name" />
+            </div>
+            <div class="">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="Enter your email address" />
+            </div>
+            <div class="">
+              <label for="msg">Message</label>
+              <textarea id="msg" placeholder="Enter your message"></textarea>
+            </div>
+            <button class="btn btn-filled ml-auto">Send to Us</button>
+          </form>
+        </div>
+        <div
+          class="dark:bg-gray-700 bg-white py-12 px-7 md:absolute lg:-right-9 right-28 rounded-xl shadow-xl md:w-2/5 h-5/6 top-28 w-full mx-auto">
+          <h3 class="font-semibold text-2xl border-b pb-4 border-gray-600">
+            Drop In Our <br />Office <span class="text-primary">.</span>
+          </h3>
+          <div class="py-4">
+            <p class="text-xs text-gray-400 leading-5">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Accusamus nihil expedita voluptate corporis doloremque id,
+              facilis
+            </p>
+            <ul class="*:flex *:gap-4 *:items-center *:mt-4">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h2>Ho Chi Mini City</h2>
+                  <address class="text-xs">13P John doe Street,Us</address>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <p>codeaprogram@gmail.com</p>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <p>+123 456 7890</p>
+              </li>
+            </ul>
+            <div class="flex items-center md:justify-end justify-center dark:text-gray-200 text-gray-600 gap-6 mt-9">
+              <p class="text-xs">Follow Us</p>
+              <div class="flex justify-end gap-3">
+                <a href="#" class="social-icon">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Footer -->
+
+  <footer class="bg-gray-800 text-gray-300">
+    <div class="container mx-auto px-4 py-8 flex flex-wrap items-center justify-between">
+      <!-- Left side: Links -->
+      <div class="mb-4 sm:mb-0">
+        <ul class="flex space-x-4">
+          <li><a href="#_" class="hover:text-white">Home</a></li>
+          <li><a href="#_" class="hover:text-white">About</a></li>
+          <li><a href="#_" class="hover:text-white">Portfolio</a></li>
+          <li><a href="#_" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Right side: Social Icons -->
+      <div class="flex space-x-4">
+        <a href="#_" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+        <a href="#_" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+        <a href="#_" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#_" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <!-- Bottom: Copyright -->
+      <div class="w-full mt-4 text-center text-sm">
+        <p>&copy; 2024 MD Saquib Hussain. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="dist/script.js"></script>
+
+</body>
+
+</html>
