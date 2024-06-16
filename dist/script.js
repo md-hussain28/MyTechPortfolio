@@ -1,30 +1,41 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to check if an element is fully in viewport
+    function isFullyInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+        return (
+            rect.top <= 0 &&
+            rect.left >= 0 &&
+            rect.bottom >= viewportHeight &&
+            rect.right <= viewportWidth
+        );
+    }
+  
 
 
-// Function to check if an element is in viewport
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+    // Add event listener for scroll
+    document.addEventListener('scroll', function() {
+        const sections = ['intro', 'about', 'experience', 'tools', 'project']; // IDs of all sections
 
-// Add event listener for scroll
-document.addEventListener('scroll', function() {
-    const sections = ['intro', 'about', 'education', 'tools', 'project']; // IDs of all sections
-
-    sections.forEach(sectionId => {
-        const targetSection = document.querySelector(`#${sectionId}`); // Select each section by its ID
-        const headerButton = document.querySelector(`.header-button[data-target="#${sectionId}"]`); // Select corresponding header button
-
-        if (targetSection && isInViewport(targetSection)) {
-            headerButton.style.display = 'none'; // Hide the button if the section is in viewport
-        } else if (headerButton) {
-            headerButton.style.display = 'inline-flex'; // Show the button if the section is not in viewport
+        sections.forEach(sectionId => {
+            const targetSection = document.getElementById(sectionId); // Select each section by its ID
+            const headerButton = document.querySelector(`.header-button[data-target="#${sectionId}"]`); // Select corresponding header button
             
-        }
+            const element = document.getElementById('projects'); // Replace with your element ID
+            console.log(sectionId,isFullyInViewport(element));
+
+            if (targetSection && isFullyInViewport(targetSection)) {
+                if (headerButton) {
+                    headerButton.style.display = 'none'; // Hide the button if the section is fully in viewport
+                }
+            } else {
+                if (headerButton) {
+                    headerButton.style.display = 'inline-flex'; // Show the button if the section is not fully in viewport
+                }
+            }
+        });
     });
 });
 
@@ -83,4 +94,29 @@ let letter = '';
 }());
 
 
-//--------------------------------unused----------------------------------------------
+//--------------------------------Project cards----------------------------------------------
+
+function showAll() {
+    // Show all cards
+    document.querySelectorAll('.card').forEach(card => {
+        card.classList.add('active');
+    });
+}
+
+function showWebD() {
+    // Show only Web-D card, hide others
+    document.querySelectorAll('.card').forEach(card => {
+        card.classList.remove('active');
+    });
+    document.getElementById('card-web-d').classList.add('active');
+}
+
+function showML() {
+    // Show only ML card, hide others
+    document.querySelectorAll('.card').forEach(card => {
+        card.classList.remove('active');
+    });
+    document.getElementById('card-ml').classList.add('active');
+}
+
+// ----------Email-------------------------------
