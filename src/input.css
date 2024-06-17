@@ -48,7 +48,7 @@ body{
   }
   
   .btn-outline {
-    @apply border-2 border-gray-600 dark:text-gray-100  text-gray-600 shadow-xl leading-6 dark:bg-slate-800 bg-white  rounded-lg font-bold;
+    @apply border-2 border-gray-600 text-gray-100  shadow-xl leading-6 bg-slate-800   rounded-lg font-bold;
   }
   
   html {
@@ -76,7 +76,7 @@ body{
     @apply md:text-2xl text-xl;
   }
   a i {
-    @apply dark:bg-slate-800 bg-gray-100 p-2 rounded-full hover:!bg-primary hover:text-white duration-300;
+    @apply bg-slate-800 p-2 rounded-full hover:!bg-primary hover:text-white duration-300;
   }
   
   button i {
@@ -85,7 +85,7 @@ body{
   
   input,
   textarea {
-    @apply border dark:border-gray-500 rounded placeholder:text-sm font-Poppins outline-none py-2 px-3 mb-4 resize-none bg-transparent;
+    @apply border border-gray-500 rounded placeholder:text-sm font-Poppins outline-none py-2 px-3 mb-4 resize-none bg-transparent;
   }
 
   .background-section {

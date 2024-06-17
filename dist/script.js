@@ -104,19 +104,40 @@ function showAll() {
 }
 
 function showWebD() {
-    // Show only Web-D card, hide others
+    // Show only Web-D cards, hide others
     document.querySelectorAll('.card').forEach(card => {
         card.classList.remove('active');
     });
-    document.getElementById('card-web-d').classList.add('active');
+
+    // Add 'active' class to all Web-D cards
+    document.querySelectorAll('#card-web-d').forEach(card => {
+        card.classList.add('active');
+    });
 }
 
 function showML() {
-    // Show only ML card, hide others
+    // Show only ML cards, hide others
     document.querySelectorAll('.card').forEach(card => {
         card.classList.remove('active');
     });
-    document.getElementById('card-ml').classList.add('active');
+
+    // Add 'active' class to all ML cards
+    document.querySelectorAll('#card-ml').forEach(card => {
+        card.classList.add('active');
+    });
 }
+function showOthers() {
+    // Show only ML cards, hide others
+    document.querySelectorAll('.card').forEach(card => {
+        card.classList.remove('active');
+    });
+
+    // Add 'active' class to all ML cards
+    document.querySelectorAll('#card-others').forEach(card => {
+        card.classList.add('active');
+    });
+}
+
+
 
 // ----------Email-------------------------------
