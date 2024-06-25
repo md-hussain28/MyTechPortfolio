@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const headerButton = document.querySelector(`.header-button[data-target="#${sectionId}"]`); // Select corresponding header button
             
             const element = document.getElementById('projects'); // Replace with your element ID
-            console.log(sectionId,isFullyInViewport(element));
+            //console.log(sectionId,isFullyInViewport(element));
 
             if (targetSection && isFullyInViewport(targetSection)) {
                 if (headerButton) {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-const texts = ["Web Developer", "ML Engineer","Competitive Programmer"];
+const texts = ["Web Developer", "ML Engineer","Code Competitor"];
 let count = 0;
 let index = 0;
 let currentText = '';

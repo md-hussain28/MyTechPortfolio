@@ -2306,10 +2306,10 @@ body {
   overflow-x: hidden !important;
 }
 
-.container {
+/* .container {
   max-width: 100% !important;
   overflow-x: hidden !important;
-}
+} */
 
 .\*\:flex > *{
   display: flex;
@@ -2449,6 +2449,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:gap-2{
+    gap: 0.5rem;
+  }
+
   .sm\:pl-2{
     padding-left: 0.5rem;
   }
@@ -2554,6 +2558,10 @@ body {
 
   .md\:gap-5{
     gap: 1.25rem;
+  }
+
+  .md\:gap-10{
+    gap: 2.5rem;
   }
 
   .md\:px-4{
